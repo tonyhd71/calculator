@@ -1,0 +1,25 @@
+
+body {
+    display: flex;
+    justify-content: center;    
+}
+#calculator {
+    background-image: url('matte.jpg');
+    width: 400px;
+    border-radius: 1em;
+}
+button {
+    padding: 15px;
+    border-radius: 3%;
+    margin:15px;
+    width: 5em;
+    display: inline-block;
+
+}
+#display {
+    height:4em;
+    background-color:  #00b140;
+    margin: 15px;
+    border-radius: 5px;
+    border-style:ridge;
+}
