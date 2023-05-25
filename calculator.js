@@ -35,6 +35,7 @@ function displayOperator(clickedOperator) {
         numInputs.push(num1);
         numInputs.push(num2);
         opInputs.push(operator.textContent);
+        //operator.textContent = '';
         operate(num1, operator.textContent, num2);
     }
 
@@ -45,6 +46,7 @@ function add(num1, num2, answer) {
     equals.textContent = answer;
     firstNum.textContent = answer;
     secondNum.textContent = '';
+    console.log(operator.textContent);
     operator.textContent = '';
 }
 function subtract(num1, num2, answer) {
@@ -53,6 +55,7 @@ function subtract(num1, num2, answer) {
     firstNum.textContent = answer;
     secondNum.textContent = '';
     operator.textContent = '';
+
 }
 function multiply(num1, num2, answer) {
     answer = num1 * num2;
@@ -66,17 +69,18 @@ function divide(num1, num2, answer) {
     equals.textContent = answer;
     firstNum.textContent = answer;
     secondNum.textContent = '';
+    console.log(operator);
     operator.textContent = '';
 }
-function operate(num1, operator, num2) {
-    if (operator == '-') {
-        subtract(num1, num2);
-    } else if (operator == '+') {
-        add(num1, num2);
-    } else if (operator == '*') {
-        multiply(num1, num2);
-    } else if (operator == '/') {
-        divide(num1, num2);
+function operate(num1, clickedOperator, num2) {
+    if (clickedOperator == '-') {
+        subtract(num1, num2, clickedOperator);
+    } else if (clickedOperator == '+') {
+        add(num1, num2, clickedOperator);
+    } else if (clickedOperator == 'x') {
+        multiply(num1, num2, clickedOperator);
+    } else if (clickedOperator == '/') {
+        divide(num1, num2, clickedOperator);
     }
 }
 function pushNum1ToArray() {
