@@ -35,7 +35,7 @@ function doMath() {
     operate(num1, operator.textContent, num2);
 }
 function displayOperator(clickedOperator) {
-    if (operator.textContent == '') {
+    if (operator.textContent == '' && firstNum.textContent != '') {
         operator.textContent = clickedOperator;
     }
     if (operator.textContent != '' && firstNum.textContent != '' && secondNum.textContent!= '') {
