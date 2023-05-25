@@ -1,25 +1,37 @@
-
 body {
     display: flex;
-    justify-content: center;    
+    justify-content: center;  
+    font-size: 3em;  
 }
 #calculator {
     background-image: url('matte.jpg');
     width: 400px;
-    border-radius: 1em;
+    border-radius: 10px;
 }
 button {
     padding: 15px;
-    border-radius: 3%;
-    margin:15px;
+    border-radius: 10px;
+    margin: 15px;
     width: 5em;
     display: inline-block;
 
 }
-#display {
+#topPart {
     height:4em;
     background-color:  #00b140;
     margin: 15px;
     border-radius: 5px;
     border-style:ridge;
+}
+button:hover {
+    background-color: azure;
+}
+#firstNum, #operator, #secondNum {
+    padding:15px;
+}
+#topPart{
+    display:block;
+}
+#displayAnswer {
+    float: right;
 }

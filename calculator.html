@@ -10,16 +10,22 @@
 <body>
     <div id="calculator">
         <div id="topPart">
-            <div id="display"></div>
+            <div id="display">
+                <span id="firstNum"></span>
+                <span id="operator"></span>
+                <span id="secondNum"></span>
+            </div>
+            <div id="displayAnswer">
+                <span id="equals"></span>
+            </div>
         </div> 
         <div id="buttonContainer">
-            <button>ON</button><button>C</button><button>Del</button><button>/</button><br>
-            <button>7</button><button>8</button><button>9</button><button>x</button><br>
-            <button>4</button><button>5</button><button>6</button><button>-</button><br>
-            <button>1</button><button>2</button><button>3</button><button>+</button><br>
-            <button>OFF</button><button>0</button><button>.</button><button>=</button><br>
+            <button id="on" class="button">ON</button><button id="c" class="button">C</button><button id="del" class="button">Del</button><button id="div" onClick="displayOperator(this.value)" value="/" class="operator button">/</button><br>
+            <button id="7" onClick="getId(parseInt(this.id))" class="num button">7</button><button id="8" onClick="getId(parseInt(this.id))" class="num button">8</button><button id="9" onClick="getId(parseInt(this.id))" class="num button">9</button><button id="mult" value="x" onClick="displayOperator(this.value)" class="operator button">x</button><br>
+            <button id="4" onClick="getId(parseInt(this.id))" class="num button">4</button><button id="5" onClick="getId(parseInt(this.id))" class="num button">5</button><button id="6" onClick="getId(parseInt(this.id))" class="num button">6</button><button id="sub" onClick="displayOperator(this.value)" value="-" class="operator button">-</button><br>
+            <button id="1" onClick="getId(parseInt(this.id))" class="num button">1</button><button id="2" onClick="getId(parseInt(this.id))" class="num button">2</button><button id="3" onClick="getId(parseInt(this.id))" class="num button">3</button><button id="add" onClick="displayOperator(this.value)" value="+" class="operator button">+</button><br>
+            <button id="off" class="button">OFF</button><button id="0" onClick="getId(this.id)" class="num button">0</button><button id="dot" class="button">.</button><button id="equals" class="button">=</button><br>
         </div>
-            
     </div>
     <script src="calculator.js"></script>
 </body>
