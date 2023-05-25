@@ -19,7 +19,6 @@ function getId(clickedNum){
 }
 function displayNumOne(clickedNum) {
     firstNum.textContent+=clickedNum;
-    //numInputs[0] = clickedNum;
 }
 function displayNumTwo(clickedNum) {
     secondNum.textContent+=clickedNum;
@@ -29,16 +28,15 @@ function displayOperator(clickedOperator) {
         operator.textContent = clickedOperator;
     }
     if (operator.textContent != '' && firstNum.textContent != '' && secondNum.textContent!= '') {
-        alert("full");
         num1 = parseInt(firstNum.textContent);
         num2 = parseInt(secondNum.textContent);
         numInputs.push(num1);
         numInputs.push(num2);
         opInputs.push(operator.textContent);
-        //operator.textContent = '';
         operate(num1, operator.textContent, num2);
-    }
+        operator.textContent =clickedOperator;
 
+    }
 }
 function add(num1, num2, answer) {
    // if (displayInput())
@@ -85,4 +83,17 @@ function operate(num1, clickedOperator, num2) {
 }
 function pushNum1ToArray() {
 
+}
+function clickEquals() {
+    if (operator.textContent == '') {
+        operator.textContent = clickedOperator;
+    }
+    if (operator.textContent != '' && firstNum.textContent != '' && secondNum.textContent!= '') {
+        num1 = parseInt(firstNum.textContent);
+        num2 = parseInt(secondNum.textContent);
+        numInputs.push(num1);
+        numInputs.push(num2);
+        opInputs.push(operator.textContent);
+        operate(num1, operator.textContent, num2);
+    }
 }
